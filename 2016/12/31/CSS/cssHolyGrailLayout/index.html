@@ -4,7 +4,7 @@
     <!-- Title -->
     
     <title>
-        读书记录 | DayDarkDark
+        圣杯布局 | DayDarkDark
     </title>
     
     <!-- Favicons -->
@@ -40,7 +40,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="读书记录 | DayDarkDark">
+    <meta property="og:title" content="圣杯布局 | DayDarkDark">
     <meta property="og:description" content="null">
     
      <!--[if lte IE 9]>
@@ -217,7 +217,7 @@
 	<ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
 		for="post-toc-trigger-btn">
 			
-			
+			<ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#圣杯布局"><span class="post-toc-number">1.</span> <span class="post-toc-text">圣杯布局</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#实现方式"><span class="post-toc-number">2.</span> <span class="post-toc-text">实现方式</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#实现逻辑"><span class="post-toc-number">3.</span> <span class="post-toc-text">实现逻辑</span></a></li></ol>
 		
 <!--			<li class="mdl-menu__item">Some Action</li>-->
 	</ul>
@@ -251,7 +251,7 @@
 		
 	
         <p class="article-headline-p">
-            读书记录
+            圣杯布局
         </p>
     </div>
 
@@ -269,7 +269,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>DayDarkDark</strong>
-        <span>12月 18, 2016</span>
+        <span>12月 31, 2016</span>
     </div>
     
     <div class="section-spacer"></div>
@@ -304,21 +304,21 @@
     
     
     <!-- Share Twitter -->
-    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=读书记录&url=http://yoursite.com//2016/12/18/readingRecord/index.html&via=DayDarkDark" target="_blank">
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=圣杯布局&url=http://yoursite.com//2016/12/31/CSS/cssHolyGrailLayout/index.html&via=DayDarkDark" target="_blank">
         <li class="mdl-menu__item">
             分享到 Twitter
         </li>
     </a>
     
     <!-- Share Google+ -->
-    <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2016/12/18/readingRecord/index.html" target="_blank">
+    <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2016/12/31/CSS/cssHolyGrailLayout/index.html" target="_blank">
         <li class="mdl-menu__item">
             分享到 Google+
         </li>
     </a>
     
     <!-- Share Weibo -->
-    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=读书记录&url=http://yoursite.com//2016/12/18/readingRecord/index.html&pic=&searchPic=false&style=simple" target="_blank">
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=圣杯布局&url=http://yoursite.com//2016/12/31/CSS/cssHolyGrailLayout/index.html&pic=&searchPic=false&style=simple" target="_blank">
         <li class="mdl-menu__item">
             分享到微博
         </li>
@@ -330,10 +330,34 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
 	
-		<ul>
-<li>深入浅出node.js</li>
-<li>javascript高级程序设计</li>
-</ul>
+		<h2 id="圣杯布局"><a href="#圣杯布局" class="headerlink" title="圣杯布局"></a>圣杯布局</h2><p>demo预览： <a href="https://codepen.io/DayDarkDark/pen/oBvLvW" target="_blank" rel="external"><em>codepen预览地址</em></a><br>圣杯布局主要是讨论「三栏液态布局」的实现，所谓液态布局就是相对固态布局而言的，固态布局是固定值不变的布局，而液态布局可以随着容器的宽度的变化而自适应宽度。<br>此布局的特点：</p>
+<ol>
+<li>两边带有固定宽度中间可以流动（fluid）</li>
+<li>允许中间一栏最先出现</li>
+<li>允许任意一栏放在最上面</li>
+<li>仅需一个额外的div标签</li>
+<li>仅需非常简单的CSS，带上最少的兼容性补丁  </li>
+</ol>
+<h2 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h2><p>首先我们需要布局的HTML代码如下，作者在这里为了方便表达，对标签使用了非语义化的<code>id</code>,建议在其他任何正式项目中尽量使用语义化的<code>id</code>。<br>例如，我们需要实现的是左侧宽度为200px，右侧宽度为150px,中间是流动的布局。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"header"</span>&gt;</span>#header<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"center"</span> <span class="attr">class</span>=<span class="string">"column"</span>&gt;</span>#center<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"left"</span> <span class="attr">class</span>=<span class="string">"column"</span>&gt;</span>#left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"right"</span> <span class="attr">class</span>=<span class="string">"column"</span>&gt;</span>#right<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"footer"</span>&gt;</span>#footer<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>CSS代码<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">    <span class="attribute">min-width</span>: <span class="number">550px</span>;   <span class="comment">/* 2 x LC width + RC width */</span></div><div class="line">&#125;</div><div class="line"><span class="selector-id">#container</span> &#123;</div><div class="line">    <span class="attribute">padding-left</span>: <span class="number">200px</span>;   <span class="comment">/* LC width */</span></div><div class="line">    <span class="attribute">padding-right</span>: <span class="number">150px</span>;  <span class="comment">/* RC width */</span></div><div class="line">&#125;</div><div class="line"><span class="selector-id">#container</span> <span class="selector-class">.column</span> &#123;</div><div class="line">    <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">position</span>: relative;</div><div class="line">    <span class="attribute">float</span>: left;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#center</span> &#123;</div><div class="line">    <span class="attribute">background-color</span>: <span class="number">#e9e9e9</span>;</div><div class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#left</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: red;</div><div class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;  <span class="comment">/* LC width */</span></div><div class="line">  <span class="attribute">right</span>: <span class="number">200px</span>;  <span class="comment">/* LC width */</span></div><div class="line">  <span class="attribute">margin-left</span>: -<span class="number">100%</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#right</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: blue;</div><div class="line">  <span class="attribute">width</span>: <span class="number">150px</span>;  <span class="comment">/* RC width */</span></div><div class="line">  <span class="attribute">margin-right</span>: -<span class="number">150px</span>;  <span class="comment">/* RC width */</span></div><div class="line">&#125;</div><div class="line"><span class="selector-id">#footer</span> &#123;</div><div class="line">  <span class="attribute">clear</span>: both;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#header</span>,</div><div class="line"><span class="selector-id">#footer</span> &#123;</div><div class="line">  <span class="attribute">background-color</span>: <span class="number">#c9c9c9</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/*** IE6 Fix ***/</span></div><div class="line">* <span class="selector-tag">html</span> <span class="selector-id">#left</span> &#123;</div><div class="line">    <span class="attribute">left</span>: <span class="number">150px</span>;    <span class="comment">/* RC width */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="实现逻辑"><a href="#实现逻辑" class="headerlink" title="实现逻辑"></a>实现逻辑</h2><ol>
+<li>先写 header footer container三个div,将container的内边距设置为左右两边各自的宽度。</li>
+</ol>
+<p><img src="http://alistapart.com/d/holygrail/diagram_01.gif" alt=""></p>
+<ol>
+<li>有了基本框架，再把三栏塞进去，觉着再给每一栏配上合适的宽度，并将它们设为浮动。同时需要清楚footer的上下环境，避免和上面三栏一起浮动<br>注意中间一栏的100%宽是基于它的父容器container的宽度而言的，由于container设置了内边距，因此中间栏看起来就处在了网页的中间，但左右两栏由于排在中间栏的后面，且因为空间不够就挤到了中间栏的下面，如下图所示：<br><img src="http://alistapart.com/d/holygrail/diagram_02.gif" alt=""></li>
+<li>把左侧栏放上去<br>中间栏已经就位，剩下的事情就是把左右两栏放上去了，接下来先放左侧栏。<br>首先，先将它的外边距设置为-100%，这样一来，由于浮动的关系，左侧栏就能上位，与中间栏交叠在一起，并占据了左边。而右侧栏由于左侧栏的上位，自动向前浮动到了原来左侧栏的位置。<br><img src="http://alistapart.com/d/holygrail/diagram_03.gif" alt=""><br>接着要用到相对定位属性(relative)，并设置一个与左侧栏等宽的偏移量：<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#container</span> <span class="selector-class">.columns</span> &#123;</div><div class="line">    <span class="attribute">float</span>: left;</div><div class="line">    <span class="attribute">position</span>: relative;</div><div class="line">&#125;</div><div class="line"><span class="selector-id">#left</span> &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;  <span class="comment">/* LC width */</span></div><div class="line">    <span class="attribute">margin-left</span>: -<span class="number">100%</span>;</div><div class="line">    <span class="attribute">right</span>: <span class="number">200px</span>; <span class="comment">/* LC width */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>乐意看到，它设置的<code>right</code>属性就是相对于container的右边线向左偏移200px,如此一来，它就完美地跑到了container左内边距的位置，如下图所示：<br><img src="http://alistapart.com/d/holygrail/diagram_04.gif" alt=""></p>
+<ol>
+<li>把右侧栏放上去<br>最后需要把右侧栏放上去，此时只需利用上面的原理把它放到container的右外边距的位置即可，需要再一次设置一个负外边距的值，等于右侧栏的宽度：  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#right &#123;</div><div class="line">    width: 150px;   /* RC width */</div><div class="line">    margin-right: -150px; /* RC width */</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>最后<br><img src="http://alistapart.com/d/holygrail/diagram_05.gif" alt=""></p>
+<blockquote>
+<p>参考地址：<a href="http://cnodejs.org/topic/56d70d5f4dfa4031185aabbf" target="_blank" rel="external">http://cnodejs.org/topic/56d70d5f4dfa4031185aabbf</a></p>
+</blockquote>
 
 	
 	
@@ -356,7 +380,7 @@
     
     <!-- Prev Nav -->
     
-        <a href="/2016/12/31/CSS/cssHolyGrailLayout/" id="post_nav-newer" class="prev-content">
+        <a href="/2017/01/01/HTTP/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -370,7 +394,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2016/12/15/blog1/" id="post_nav-older" class="next-content">
+        <a href="/2016/12/18/readingRecord/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
