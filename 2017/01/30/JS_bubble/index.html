@@ -4,7 +4,7 @@
     <!-- Title -->
     
     <title>
-        《JS高级程序设计》读书笔记 - 面向对象的程序设计 | DayDarkDark
+        JavaScript的闭包 | DayDarkDark
     </title>
     
     <!-- Favicons -->
@@ -40,7 +40,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="《JS高级程序设计》读书笔记 - 面向对象的程序设计 | DayDarkDark">
+    <meta property="og:title" content="JavaScript的闭包 | DayDarkDark">
     <meta property="og:description" content="null">
     
      <!--[if lte IE 9]>
@@ -217,7 +217,7 @@
 	<ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
 		for="post-toc-trigger-btn">
 			
-			<ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原型模式"><span class="post-toc-number">1.</span> <span class="post-toc-text">原型模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#构造函数模式"><span class="post-toc-number">2.</span> <span class="post-toc-text">构造函数模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原型模式-1"><span class="post-toc-number">3.</span> <span class="post-toc-text">原型模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#组合使用构造函数模式和原型模式"><span class="post-toc-number">4.</span> <span class="post-toc-text">组合使用构造函数模式和原型模式</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#继承"><span class="post-toc-number"></span> <span class="post-toc-text">继承</span></a>
+			
 		
 <!--			<li class="mdl-menu__item">Some Action</li>-->
 	</ul>
@@ -251,7 +251,7 @@
 		
 	
         <p class="article-headline-p">
-            《JS高级程序设计》读书笔记 - 面向对象的程序设计
+            JavaScript的闭包
         </p>
     </div>
 
@@ -269,7 +269,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>DayDarkDark</strong>
-        <span>12月 15, 2016</span>
+        <span>1月 30, 2017</span>
     </div>
     
     <div class="section-spacer"></div>
@@ -304,21 +304,21 @@
     
     
     <!-- Share Twitter -->
-    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=《JS高级程序设计》读书笔记 - 面向对象的程序设计&url=http://yoursite.com//2016/12/15/blog1/index.html&via=DayDarkDark" target="_blank">
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=JavaScript的闭包&url=http://yoursite.com//2017/01/30/JS_bubble/index.html&via=DayDarkDark" target="_blank">
         <li class="mdl-menu__item">
             分享到 Twitter
         </li>
     </a>
     
     <!-- Share Google+ -->
-    <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2016/12/15/blog1/index.html" target="_blank">
+    <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2017/01/30/JS_bubble/index.html" target="_blank">
         <li class="mdl-menu__item">
             分享到 Google+
         </li>
     </a>
     
     <!-- Share Weibo -->
-    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=《JS高级程序设计》读书笔记 - 面向对象的程序设计&url=http://yoursite.com//2016/12/15/blog1/index.html&pic=&searchPic=false&style=simple" target="_blank">
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=JavaScript的闭包&url=http://yoursite.com//2017/01/30/JS_bubble/index.html&pic=&searchPic=false&style=simple" target="_blank">
         <li class="mdl-menu__item">
             分享到微博
         </li>
@@ -330,17 +330,17 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
 	
-		<p>ECMAScript中并没有类的概念，通过其他途径可间接实现类</p>
-<h3 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>) </span>&#123;</div><div class="line">&#125;</div><div class="line">Person.prototype = &#123;</div><div class="line">    <span class="attr">name</span>: <span class="string">"Nicholas"</span>,</div><div class="line">    <span class="attr">age</span>: <span class="number">29</span>,</div><div class="line">    <span class="attr">job</span>: <span class="string">"Software Engineer"</span></div><div class="line">    sayName: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        alert(<span class="keyword">this</span>.name);</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">object.defineProperty(Person.prototype, <span class="string">"constructor"</span>, &#123;</div><div class="line">    <span class="attr">enumerable</span>: <span class="literal">false</span>,</div><div class="line">    <span class="attr">value</span>: Person</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h3 id="构造函数模式"><a href="#构造函数模式" class="headerlink" title="构造函数模式"></a>构造函数模式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age, job</span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.name = name;</div><div class="line">    <span class="keyword">this</span>.age = age;</div><div class="line">    <span class="keyword">this</span>.job = job;</div><div class="line">    <span class="keyword">this</span>.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        alert(<span class="keyword">this</span>.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> person1 = <span class="keyword">new</span> Person(<span class="string">"Nicholas"</span>, <span class="number">29</span>, <span class="string">"Software Engineer"</span>);</div></pre></td></tr></table></figure>
-<p>特点：</p>
-<pre><code>1. 没有显式地创建对象
-2. 直接将属性和方法赋给了this对象
-3. 没有return语句
-</code></pre><p>问题<br>    每新建一个对象，就会new一个function</p>
-<h3 id="原型模式-1"><a href="#原型模式-1" class="headerlink" title="原型模式"></a>原型模式</h3><p>创建的每一个函数都有一个prototype属性，这个属性是一个指针，指向一个对象，而这个对象的用途是包含可以由特定类型的所有实例共享的属性和方法。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">function Person() &#123;&#125;</div><div class="line">Person.peo</div></pre></td></tr></table></figure></p>
-<h3 id="组合使用构造函数模式和原型模式"><a href="#组合使用构造函数模式和原型模式" class="headerlink" title="组合使用构造函数模式和原型模式"></a>组合使用构造函数模式和原型模式</h3><p>创建自定义类型的最常见方式，就是组合使用构造函数模式与原型模式<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age, job</span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.name = name;</div><div class="line">    <span class="keyword">this</span>.age = age;</div><div class="line">    <span class="keyword">this</span>.job = job;</div><div class="line">    <span class="keyword">this</span>.friends = [<span class="string">"Shelby"</span>, <span class="string">"Court"</span>];</div><div class="line">&#125;</div><div class="line"></div><div class="line">Person.prototype = &#123;</div><div class="line">    <span class="attr">constructor</span>: Person,</div><div class="line">    <span class="attr">sayName</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        alert(<span class="keyword">this</span>.name);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> person1 = <span class="keyword">new</span> Person(<span class="string">"Nicholas"</span>, <span class="number">29</span>, <span class="string">"Software Engineer"</span>);</div><div class="line"><span class="keyword">var</span> person2 = <span class="keyword">new</span> Person(<span class="string">"Greg"</span>, <span class="number">27</span>, <span class="string">"Doctor"</span>);</div><div class="line"></div><div class="line">person1.friends.push(<span class="string">"Vans"</span>);</div><div class="line">alert(person1.friends); <span class="comment">//"Shelby, Count,Van"</span></div><div class="line">alert(person2.friends); <span class="comment">//"Shelby,Count"</span></div><div class="line">alert(person1.friends === person2,friends); <span class="comment">//false</span></div><div class="line">alert(person1.sayName === person2.sayName); <span class="comment">//true</span></div></pre></td></tr></table></figure></p>
-<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">inheritPrototype</span>(<span class="params">subType, superType</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> prototype = object(superType.prototype); <span class="comment">// 创建对象</span></div><div class="line">    prototype.constructor = subType; <span class="comment">// 增强对象</span></div><div class="line">    subType.prototype = prototype; <span class="comment">// 指定对象</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SuperType</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.name = name;</div><div class="line">    <span class="keyword">this</span>.colors = [<span class="string">"red"</span>, <span class="string">"blue"</span>, <span class="string">"green"</span>];</div><div class="line">&#125;</div><div class="line">SuperType.prototype.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    alert(<span class="keyword">this</span>.name);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">SubType</span>(<span class="params">name, age</span>) </span>&#123;</div><div class="line">    SuperType.call(<span class="keyword">this</span>.name);</div><div class="line">    </div><div class="line">    <span class="keyword">this</span>.age = age;</div><div class="line">&#125;</div><div class="line">inheritPrototype(SubType, SuperType);</div><div class="line"></div><div class="line">SubType.prototype.sayAge = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    alert(<span class="keyword">this</span>.age);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+		<p>  要想让JavaScript对用户的操作作出响应，首先要对DOM元素绑定事件处理函数。所谓事件处理函数，就是处理用户操作的函数，不同的操作对应不同的名称<br>  在JavaScript中，有三种常用的绑定事件的方法</p>
+<pre><code>1. 在DOM元素中直接绑定
+2. 在JavaScrippt代码中绑定
+3. 绑定事件监听函数
+</code></pre><p>  在DOM中直接绑定事件<br>  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"click me"</span> <span class="attr">onclick</span>=<span class="string">"hello"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">hello</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      alert(<span class="string">"hello wrold"</span>);</div><div class="line">  &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>  2.在JavaScript代码中绑定事件</p>
+<ol>
+<li>在JavaScript代码中绑定事件可以使JavaScript代码与HTML标签分离，<br>文档结构清晰，便于管理和开发<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">value</span>=<span class="string">"click me"</span> <span class="attr">id</span>=<span class="string">"btn"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="built_in">document</span>.getElementById(<span class="string">'btn'</span>).onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        alert(<span class="string">"hello world"</span>);</div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+
 	
 	
 	
@@ -362,7 +362,7 @@
     
     <!-- Prev Nav -->
     
-        <a href="/2016/12/18/readingRecord/" id="post_nav-newer" class="prev-content">
+        <a href="/2017/02/03/js-stack/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -375,6 +375,14 @@
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2017/01/20/JS_7_function/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
         </div>
