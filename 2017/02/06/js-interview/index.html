@@ -4,7 +4,7 @@
     <!-- Title -->
     
     <title>
-        js_stack | DayDarkDark
+        js_interview | DayDarkDark
     </title>
     
     <!-- Favicons -->
@@ -40,7 +40,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="js_stack | DayDarkDark">
+    <meta property="og:title" content="js_interview | DayDarkDark">
     <meta property="og:description" content="null">
     
      <!--[if lte IE 9]>
@@ -251,7 +251,7 @@
 		
 	
         <p class="article-headline-p">
-            js_stack
+            js_interview
         </p>
     </div>
 
@@ -269,7 +269,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>DayDarkDark</strong>
-        <span>2月 03, 2017</span>
+        <span>2月 06, 2017</span>
     </div>
     
     <div class="section-spacer"></div>
@@ -304,21 +304,21 @@
     
     
     <!-- Share Twitter -->
-    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=js_stack&url=http://yoursite.com//2017/02/03/js-stack/index.html&via=DayDarkDark" target="_blank">
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=js_interview&url=http://yoursite.com//2017/02/06/js-interview/index.html&via=DayDarkDark" target="_blank">
         <li class="mdl-menu__item">
             分享到 Twitter
         </li>
     </a>
     
     <!-- Share Google+ -->
-    <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2017/02/03/js-stack/index.html" target="_blank">
+    <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2017/02/06/js-interview/index.html" target="_blank">
         <li class="mdl-menu__item">
             分享到 Google+
         </li>
     </a>
     
     <!-- Share Weibo -->
-    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=js_stack&url=http://yoursite.com//2017/02/03/js-stack/index.html&pic=&searchPic=false&style=simple" target="_blank">
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=js_interview&url=http://yoursite.com//2017/02/06/js-interview/index.html&pic=&searchPic=false&style=simple" target="_blank">
         <li class="mdl-menu__item">
             分享到微博
         </li>
@@ -330,14 +330,46 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
 	
-		<p>1.使用js实现栈：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Stack</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> items = [];</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.push = <span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">        items.push(element);</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.pop = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> items.pop();</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.peek = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> items[items.length - <span class="number">1</span>];</div><div class="line">    &#125;;</div><div class="line">    </div><div class="line">    <span class="keyword">this</span>.isEmpty = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> items.length == <span class="number">0</span>;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.size = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        items = [];</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.clear = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        items = [];</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.print = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(items.toSting());</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>2.使用js实现队列</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Queue</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    </div><div class="line">    <span class="keyword">var</span> items = [];</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.enqueue = <span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.push(element);</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.dequeue = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> items.shift();</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.front = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> items[<span class="number">0</span>];</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.isEmpty = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> items.length === <span class="number">0</span>;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.size = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> items.length;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.clear = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        items = [];</div><div class="line">    &#125;;</div><div class="line">    </div><div class="line">    <span class="keyword">this</span>.print = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(items.toSting());</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+		<p>为了面试做一下准备：  </p>
 <ol>
-<li>使用js实现链表</li>
+<li><p>get请求和post请求的区别？<br>get请求数据有限，因为暴露在url上面，因此会引发安全问题。使用history就可以进行攻击<br>post请求无法保存标签。post请求不会缓存数据，get方法会，可以通过时间戳的方式避免。<br>GET请求只能传文本给服务器，POST可以传文本和二进制数据，如上传文件<br>GET请求的效率比post请求高，原因是get请求只请求一次(header), post请求需要请求两次(header和body)。（包的内容不一样，服务器处理时，post的header比get大一些）<br>GET请求头</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">request-line get url http/1.1</div><div class="line">accept */*</div><div class="line">accept-encoding gzip,deflate</div><div class="line">accept-language zh-cn</div><div class="line">connection keep-alive</div><div class="line">host localhost</div><div class="line">referer url</div><div class="line">user-agent</div></pre></td></tr></table></figure>
+</li>
+<li><p>跨站请求(csrf)<br>通过服务器端的随机数token（最安全）或者判断referer解决</p>
+</li>
+<li>图片的data:url和直接加载图片的优缺点<br>图片被转换成base64编码的字符串形式，并存储在url中。使用Date url技术，图片数据以base64字符串格式嵌入到了页面中，与Html成为一体<ul>
+<li>当图片的体积太小，占用一个HTTP会话不是很值得时，可以使用Data url</li>
+<li>Data URL形式的图片不会被浏览器缓存，这意味着每次访问这样页面时都被下载一次。这是一个使用效率方面的问题</li>
+<li>可以将Data URL形式的图片存储在css样式表中。而所有浏览器都会积极的缓存css文件来提高页面加载效率</li>
+<li>只要这个图片不是很大，而且不是在CSS文件里反复使用，就可以以DATA URL方法呈现图片降低页面的加载事件</li>
+</ul>
+</li>
+<li>什么是语义化的html<ul>
+<li>直观的认识标签 对于搜索引擎的抓取有好处</li>
+<li>html语义化就是让页面的内容结构化，便于对浏览器，搜索引擎解析</li>
+</ul>
+</li>
+<li>关于html5<ul>
+<li>HTML5 现在已经不是SGML的子集，主要是关于图像，位置，存储，多任务等功能的增加</li>
+<li>绘画 canvas</li>
+<li>本地离线存储 localStorage 长期存储数据， 浏览器关闭后的数据不丢失</li>
+<li>sessionStorage的数据在浏览器关闭后自动删除  </li>
+<li>语义化更好的内容元素，比如article，footer，header，nav，section</li>
+<li>表单空间，calendar,date,time,email.url,search</li>
+<li>新的技术 webworker,websockt,Geolocation移除的元素</li>
+<li>纯表现的元素： basefont，big,center, font s trike,tt,u</li>
+</ul>
+</li>
+<li>cookies，sessionStorage和localStorage区别<ul>
+<li>cookie在浏览器和服务器间来回传递。其他不会</li>
+<li>sessionStorage和localStorage的存储空间更大，有更多接口与独立的存储空间</li>
+</ul>
+</li>
+<li>js快排<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> quickSort = <span class="function"><span class="keyword">function</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (arr.length &lt;= <span class="number">1</span>) &#123;</div><div class="line">        <span class="keyword">return</span> arr;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">var</span> pivotIndex = <span class="built_in">Math</span>.floor(arr.length / <span class="number">2</span>);</div><div class="line">    <span class="keyword">var</span> pivot = arr.splice(pivotIndex, <span class="number">1</span>)[<span class="number">0</span>];</div><div class="line">    <span class="keyword">var</span> left = [];</div><div class="line">    <span class="keyword">var</span> right = [];</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (arr[i] &lt; pivot) &#123;</div><div class="line">            left.push(arr[i]);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> &#123;</div><div class="line">            right.push(arr[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> quickSort(left).concat([pivot], quickSort(right));</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</li>
 </ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">LinkedList</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> Node = <span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.element = element;</div><div class="line">        <span class="keyword">this</span>.next = <span class="literal">null</span>;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> length = <span class="number">0</span>;</div><div class="line">    <span class="keyword">var</span> head = <span class="literal">null</span>;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.append = <span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> node = <span class="keyword">new</span> Node(element);</div><div class="line">        <span class="keyword">var</span> current;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (head === <span class="literal">null</span>) &#123;</div><div class="line">            head = node;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> &#123;</div><div class="line">            current = head;</div><div class="line"></div><div class="line">            <span class="keyword">while</span> (current.next) &#123;</div><div class="line">                current = current.next;</div><div class="line">            &#125;</div><div class="line">            current.next = node;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        ++length;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>8 js二分搜索<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//递归方法</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">binarySearch</span>(<span class="params">data, item, start, end</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> end = end || data.length - <span class="number">1</span>;</div><div class="line">    <span class="keyword">var</span> start = start || <span class="number">0</span>;</div><div class="line">    <span class="keyword">var</span> m = <span class="built_in">Math</span>.floor((start + end) / <span class="number">2</span>);</div><div class="line">    <span class="keyword">if</span> (item == data[m]) &#123;</div><div class="line">        <span class="keyword">return</span> m;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (item &lt; data[m]) &#123;</div><div class="line">        <span class="keyword">return</span> binarySearch(data, item, start, m<span class="number">-1</span>)</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> binarySearch(data, item. m + <span class="number">1</span>, end);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">//非递归方法</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">binarySearch</span>(<span class="params">data, item</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> h = data.length - <span class="number">1</span>;</div><div class="line">    <span class="keyword">var</span> l = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span> (l &lt;= h) &#123;</div><div class="line">        <span class="keyword">var</span> m = <span class="built_in">Math</span>.floor((h + <span class="number">1</span>) / <span class="number">2</span>);</div><div class="line">        <span class="keyword">if</span> (data[m] == item) &#123;</div><div class="line">            <span class="keyword">return</span> m;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (item &gt; data[m]) &#123;</div><div class="line">            l = m + <span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> &#123;</div><div class="line">            h = m - <span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
 	
 	
 	
@@ -359,21 +391,13 @@
     
     <!-- Prev Nav -->
     
-        <a href="/2017/02/04/js-jqueryExtend/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/01/30/JS_bubble/" id="post_nav-older" class="next-content">
+        <a href="/2017/02/04/js-jqueryExtend/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
