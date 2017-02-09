@@ -4,7 +4,7 @@
     <!-- Title -->
     
     <title>
-        js_stack | DayDarkDark
+        如何开发jquery插件 | DayDarkDark
     </title>
     
     <!-- Favicons -->
@@ -40,7 +40,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="js_stack | DayDarkDark">
+    <meta property="og:title" content="如何开发jquery插件 | DayDarkDark">
     <meta property="og:description" content="null">
     
      <!--[if lte IE 9]>
@@ -217,7 +217,7 @@
 	<ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
 		for="post-toc-trigger-btn">
 			
-			
+			<ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jquery插件开发模式"><span class="post-toc-number">1.</span> <span class="post-toc-text">jquery插件开发模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#插件开发"><span class="post-toc-number">2.</span> <span class="post-toc-text">插件开发</span></a></li></ol>
 		
 <!--			<li class="mdl-menu__item">Some Action</li>-->
 	</ul>
@@ -251,7 +251,7 @@
 		
 	
         <p class="article-headline-p">
-            js_stack
+            如何开发jquery插件
         </p>
     </div>
 
@@ -269,7 +269,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>DayDarkDark</strong>
-        <span>2月 03, 2017</span>
+        <span>2月 04, 2017</span>
     </div>
     
     <div class="section-spacer"></div>
@@ -289,7 +289,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        
+        <a class="post_tag-link" href="/tags/jQuery/">jQuery</a>
     </ul>
     
     <!-- Share -->
@@ -304,21 +304,21 @@
     
     
     <!-- Share Twitter -->
-    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=js_stack&url=http://yoursite.com//2017/02/03/js-stack/index.html&via=DayDarkDark" target="_blank">
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=如何开发jquery插件&url=http://yoursite.com//2017/02/04/JS/js-jqueryExtend/index.html&via=DayDarkDark" target="_blank">
         <li class="mdl-menu__item">
             分享到 Twitter
         </li>
     </a>
     
     <!-- Share Google+ -->
-    <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2017/02/03/js-stack/index.html" target="_blank">
+    <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2017/02/04/JS/js-jqueryExtend/index.html" target="_blank">
         <li class="mdl-menu__item">
             分享到 Google+
         </li>
     </a>
     
     <!-- Share Weibo -->
-    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=js_stack&url=http://yoursite.com//2017/02/03/js-stack/index.html&pic=&searchPic=false&style=simple" target="_blank">
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=如何开发jquery插件&url=http://yoursite.com//2017/02/04/JS/js-jqueryExtend/index.html&pic=&searchPic=false&style=simple" target="_blank">
         <li class="mdl-menu__item">
             分享到微博
         </li>
@@ -330,14 +330,25 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
 	
-		<p>1.使用js实现栈：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Stack</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> items = [];</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.push = <span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">        items.push(element);</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.pop = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> items.pop();</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.peek = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> items[items.length - <span class="number">1</span>];</div><div class="line">    &#125;;</div><div class="line">    </div><div class="line">    <span class="keyword">this</span>.isEmpty = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> items.length == <span class="number">0</span>;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.size = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        items = [];</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.clear = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        items = [];</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.print = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(items.toSting());</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>2.使用js实现队列</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Queue</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    </div><div class="line">    <span class="keyword">var</span> items = [];</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.enqueue = <span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.push(element);</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.dequeue = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> items.shift();</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.front = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> items[<span class="number">0</span>];</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.isEmpty = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> items.length === <span class="number">0</span>;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.size = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> items.length;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.clear = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        items = [];</div><div class="line">    &#125;;</div><div class="line">    </div><div class="line">    <span class="keyword">this</span>.print = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(items.toSting());</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+		<h3 id="jquery插件开发模式"><a href="#jquery插件开发模式" class="headerlink" title="jquery插件开发模式"></a>jquery插件开发模式</h3><p>jquery插件一般有三种开发方式：</p>
 <ol>
-<li>使用js实现链表</li>
+<li>通过$.extend()来扩展jQuery</li>
+<li>通过$.fn 向jQuery添加新的方法</li>
+<li>通过$.widget()应用jQuery UI的部件工厂方式创建</li>
 </ol>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">LinkedList</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> Node = <span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.element = element;</div><div class="line">        <span class="keyword">this</span>.next = <span class="literal">null</span>;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> length = <span class="number">0</span>;</div><div class="line">    <span class="keyword">var</span> head = <span class="literal">null</span>;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.append = <span class="function"><span class="keyword">function</span>(<span class="params">element</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> node = <span class="keyword">new</span> Node(element);</div><div class="line">        <span class="keyword">var</span> current;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (head === <span class="literal">null</span>) &#123;</div><div class="line">            head = node;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span> &#123;</div><div class="line">            current = head;</div><div class="line"></div><div class="line">            <span class="keyword">while</span> (current.next) &#123;</div><div class="line">                current = current.next;</div><div class="line">            &#125;</div><div class="line">            current.next = node;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        ++length;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>其中$.fn是一般插件开发用到的方式</p>
+<h3 id="插件开发"><a href="#插件开发" class="headerlink" title="插件开发"></a>插件开发</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$.fn.pluginName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// your code here</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>例如定义一个对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Haorooms = <span class="function"><span class="keyword">function</span>(<span class="params">el, opt</span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.$element = el,</div><div class="line">    <span class="keyword">this</span>.defaults = &#123;</div><div class="line">        <span class="string">'color'</span>: <span class="string">'red'</span>,</div><div class="line">        <span class="string">'fontSize'</span>: <span class="string">'12px'</span>,</div><div class="line">        <span class="string">'textDexoration'</span>: <span class="string">'none'</span></div><div class="line">    &#125;,</div><div class="line">    <span class="keyword">this</span>.options = $.extend(&#123;&#125;, <span class="keyword">this</span>.defaults, opt)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//定义haorooms的方法</span></div><div class="line">haorooms.prototype = &#123;</div><div class="line">    <span class="attr">changecss</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.$element.css(&#123;</div><div class="line">            <span class="string">'color'</span>: <span class="keyword">this</span>.options.color,</div><div class="line">            <span class="string">'font-size'</span>: <span class="keyword">this</span>.options.fontSize,</div><div class="line">            <span class="string">'textDexoration'</span>: <span class="keyword">this</span>.options.textDexoration</div><div class="line">        &#125;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>$.extend({}, this.defaults, opt)有{}主要是为了创建一个新对象， 保留对象的默认值。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$.fn.myPlugin = <span class="function"><span class="keyword">function</span>(<span class="params">options</span>) </span>&#123;</div><div class="line">    <span class="comment">//创建haorooms的实体</span></div><div class="line">    <span class="keyword">var</span> haorooms = <span class="keyword">new</span> Haorooms(<span class="keyword">this</span>, options);</div><div class="line">    <span class="comment">//调用其方法</span></div><div class="line">    <span class="keyword">return</span> Haorooms.changecss();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>调用这个插件就是熟悉的写法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    $(<span class="string">'a'</span>).myPlugin(&#123;</div><div class="line">        <span class="string">'color'</span>: <span class="string">'#2C9929'</span>,</div><div class="line">        <span class="string">'fontSize'</span>: <span class="string">'20px'</span></div><div class="line">    &#125;);</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>上面的方法存在一个严重的问题，就是定义了一个全局的Haorooms，这样对于插件的兼容等等各个方面都不好。万一别的地方用到了Haorooms，那么就会出现严重问题。<br>所以需要将上面的代码包装起来。用<code>自调用匿名函数</code>包裹，就不会出现问题了<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"></div><div class="line">&#125;)()</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>有些代码前面加”;”，是为了避免代码合并出现作物<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> haoroomsblog = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"></div><div class="line">&#125;</div><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"></div><div class="line">&#125;)（）</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>由于<code>haoroomsblog</code>后面没加分号，导致代码出错，所以<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">; (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">&#125;)()</div></pre></td></tr></table></figure></p>
+<p>再把插件代码包裹在里面。<br>有些人为了避免jquery和zeptojs冲突，将jquery的前缀”$”修改为”jQuery”，还有些将默认的document等方法修改，所以为了兼容性更好：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">;(<span class="function"><span class="keyword">function</span>(<span class="params">$, widnow, document, undefined</span>)</span>&#123;</div><div class="line"></div><div class="line">&#125;)(jQuery, <span class="built_in">window</span>, <span class="built_in">document</span>);</div></pre></td></tr></table></figure></p>
+
 	
 	
 	
@@ -359,7 +370,7 @@
     
     <!-- Prev Nav -->
     
-        <a href="/2017/02/04/js-jqueryExtend/" id="post_nav-newer" class="prev-content">
+        <a href="/2017/02/06/JS/js-interview/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -373,7 +384,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2017/01/30/JS_bubble/" id="post_nav-older" class="next-content">
+        <a href="/2017/02/03/JS/js-stack/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -459,7 +470,7 @@
         </a>
         <ul class="dropdown-menu">
             <li>
-            <a class="sidebar_archives-link" href="/archives/2017/02/">二月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">3</span></a>
+            <a class="sidebar_archives-link" href="/archives/2017/02/">二月 2017<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">3</span></a>
         </ul>
     </li>
 
@@ -474,7 +485,7 @@
     <li>
         <a href="/archives">
              文章总数
-             <span class="sidebar-badge">9</span>
+             <span class="sidebar-badge">11</span>
         </a>
     </li>
 </ul>
